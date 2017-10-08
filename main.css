@@ -26,21 +26,31 @@ body {
 
 .selectors{
     height:100%;
+    width:100%;
+    
 }
 
 .selectors button{
     border: 0;
     border-radius: 0;
-    background-color: #f5f5f5;
+    background-color: #f8f9fa;
     width:25%;
+    color:black;
+    margin-left: 0;
 }
 
 .active{
     display: flex;
+    flex-direction: column;
 }
 
 .inactive{
     display: none;
+}
+
+.block{
+    height:100%;
+    width:100%;
 }
 
 
