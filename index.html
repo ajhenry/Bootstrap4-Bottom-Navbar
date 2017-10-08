@@ -7,10 +7,10 @@
     <meta name="author" content="Andrew Henry">
     <link rel="icon" href="#">
 
-    <title>Android Nav Template</title>
+    <title>Bootstrap Nav Template</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
     <!-- Google Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
   </head>
@@ -91,12 +91,32 @@
     </div>
 
     <footer class="footer">
-                <div id="buttonGroup" class="btn-group selectors" role="group" aria-label="Basic example">
-                    <button id="home" type="button" class="btn btn-secondary"><i class="material-icons">home</i></button>
-                    <button id="feed" type="button" class="btn btn-secondary"><i class="material-icons">view_list</i></button>
-                    <button id="create" type="button" class="btn btn-secondary"><i class="material-icons">create</i></button>
-                    <button id="account" type="button" class="btn btn-secondary"><i class="material-icons">account_circle</i></button>
-                </div>
+        <div id="buttonGroup" class="btn-group selectors" role="group" aria-label="Basic example">
+            <button id="home" type="button" class="btn btn-secondary">
+              <div class = "selector-holder">
+                <i class="material-icons">home</i>
+                <span>Home</span>
+              </div>
+            </button>
+            <button id="feed" type="button" class="btn btn-secondary">
+              <div class = "selector-holder">
+                <i class="material-icons">view_list</i>
+                <span>Feed</span>
+              </div>
+            </button>
+            <button id="create" type="button" class="btn btn-secondary">
+              <div class = "selector-holder">
+                <i class="material-icons">create</i>
+                <span>Create</span>
+              </div>
+            </button>
+            <button id="account" type="button" class="btn btn-secondary">
+              <div class = "selector-holder">
+                <i class="material-icons">account_circle</i>
+                <span>Account</span>
+              </div>
+            </button>
+        </div>
     </footer>
 
 

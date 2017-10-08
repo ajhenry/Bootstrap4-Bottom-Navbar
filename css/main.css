@@ -1,0 +1,71 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  /* Margin top by header height */
+  margin-top: 60px;
+}
+.footer {
+    position:fixed;
+     bottom: 0;
+     width: 100%;
+     /* Set the fixed height of the footer here */
+     height: 60px;
+     background-color: #f5f5f5;
+
+    border-top: 1px solid transparent;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar{
+    border-top: 1px solid transparent;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.group-container{
+    padding:0;
+    height:100%;
+}
+
+.selectors{
+    height:100%;
+    width:100%;
+}
+
+.selectors button{
+    border: 0;
+    border-radius: 0;
+    background-color: #f8f9fa;
+    width:25%;
+    color:#000;
+    margin-left: 0;
+}
+
+.active{
+    display: flex;
+    flex-direction: column;
+}
+
+.inactive{
+    display: none;
+}
+
+.block{
+    height:100%;
+    width:100%;
+}
+
+.selector-holder{
+    display:flex;
+    flex-direction: column;
+}
+
+.selector-holder span{
+    font-size: 0.8rem;
+}
+
+
+
