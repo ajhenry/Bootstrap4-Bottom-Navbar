@@ -35,4 +35,12 @@ body {
     width:25%;
 }
 
+.active{
+    display: flex;
+}
+
+.inactive{
+    display: none;
+}
+
 

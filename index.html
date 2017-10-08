@@ -22,36 +22,28 @@
       </nav>  
 
     <!-- Begin page content -->
-    <div class="container">
-        <p>Long container</p>
-        <p>Long container</p>
-        <p>Long container</p>
-        <p>Long container</p>
-        <p>Long container</p>
-        <p>Long container</p>
-        <p>Long container</p>
-        <p>Long container</p>
-        <p>Long container</p>
-        <p>Long container</p>
-        <p>Long container</p>
-        <p>Long container</p>
-        <p>Long container</p>
-        <p>Long container</p>
-        <p>Long container</p>
-        <p>Long container</p>
-        <p>Long container</p>
-        <p>Long container</p>
-        <p>Long container</p>
-
+    <div class="container-fluid">
+        <div id="page-home" class="active">
+          <p>This is the home page</p>
+        </div>
+        <div id="page-feed" class="inactive">
+            <p>This is the feed page</p>
+        </div>
+        <div id="page-create" class="inactive">
+            <p>This is the create page</p>
+        </div>
+        <div id="page-account" class="inactive">
+            <p>This is the account page</p>
+        </div>
     </div>
 
     <footer class="footer">
         <nav class="navbar navbar-light bg-faded group-container">
-                <div class="btn-group selectors" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-secondary"><i class="material-icons">home</i></button>
-                    <button type="button" class="btn btn-secondary"><i class="material-icons">view_list</i></button>
-                    <button type="button" class="btn btn-secondary"><i class="material-icons">create</i></button>
-                    <button type="button" class="btn btn-secondary"><i class="material-icons">account_circle</i></button>
+                <div id="buttonGroup" class="btn-group selectors" role="group" aria-label="Basic example">
+                    <button id="home" type="button" class="btn btn-secondary"><i class="material-icons">home</i></button>
+                    <button id="feed" type="button" class="btn btn-secondary"><i class="material-icons">view_list</i></button>
+                    <button id="create" type="button" class="btn btn-secondary"><i class="material-icons">create</i></button>
+                    <button id="account" type="button" class="btn btn-secondary"><i class="material-icons">account_circle</i></button>
                 </div>
         </nav>
     </footer>
@@ -61,5 +53,41 @@
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  
+    <script type="text/javascript">
+    var currentPageId = "page-home";
+
+    function getButtons(){
+        var list = ["home", "feed", "create", "account"];
+        return list;
+    }
+    //Make sure the window is loaded before we add listeners
+    window.onload = function(){
+      var pageIdList = getButtons();
+      //Add an event listener to each button
+      pageIdList.forEach(function(page){
+        console.log("added "+page);
+        document.getElementById(page).addEventListener("click", changePage, false);
+      });
+    }
+
+    function changePage(){
+      console.log(this.id);
+      var currentPage = document.getElementById(currentPageId);
+      var pageId = "page-"+this.id;
+      var page = document.getElementById(pageId);
+      if(page.classList.contains("active")){
+        return;
+      }
+
+      currentPage.classList.remove("active");
+      currentPage.classList.add("inactive");
+
+      page.classList.remove("inactive");
+      page.classList.add("active");
+      
+      currentPageId = pageId;
+    }
+    </script>
   </body>
 </html>
