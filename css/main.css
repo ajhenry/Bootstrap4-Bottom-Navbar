@@ -30,7 +30,7 @@ body {
     height:100%;
 }
 
-.selectors{
+.selectors, .block{
     height:100%;
     width:100%;
 }
@@ -38,13 +38,28 @@ body {
 .selectors button{
     border: 0;
     border-radius: 0;
-    background-color: #f8f9fa;
+    background-color: #f8f9fa !important;
     width:25%;
-    color:#000;
     margin-left: 0;
 }
 
-.active{
+.selectors button:active{
+    border:0;
+    color:#ff0000;
+}
+
+.selectors button:focus{
+    color:#ff0000;
+    border:0;
+    outline: 0;
+    box-shadow: 0 0 0 0px;
+}
+
+.selectors button:hover{
+    color:#ff0000;
+}
+
+.active, .selector-holder{
     display: flex;
     flex-direction: column;
 }
@@ -53,19 +68,14 @@ body {
     display: none;
 }
 
-.block{
-    height:100%;
-    width:100%;
-}
-
-.selector-holder{
-    display:flex;
-    flex-direction: column;
-}
-
 .selector-holder span{
     font-size: 0.8rem;
 }
 
+.button-active{
+    color: #ff0000;
+}
 
-
+.button-inactive{
+    color: #000;
+}
