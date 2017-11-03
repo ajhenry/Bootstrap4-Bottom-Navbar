@@ -2,17 +2,16 @@ html {
   position: relative;
   min-height: 100%;
 }
+
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-  /* Margin top by header height */
+  margin-bottom: 80px;
   margin-top: 60px;
 }
+
 .footer {
     position:fixed;
      bottom: 0;
      width: 100%;
-     /* Set the fixed height of the footer here */
      height: 60px;
      background-color: #f5f5f5;
 
@@ -45,18 +44,12 @@ body {
 
 .selectors button:active{
     border:0;
-    color:#ff0000;
 }
 
 .selectors button:focus{
-    color:#ff0000;
     border:0;
     outline: 0;
     box-shadow: 0 0 0 0px;
-}
-
-.selectors button:hover{
-    color:#ff0000;
 }
 
 .active, .selector-holder{
@@ -72,8 +65,9 @@ body {
     font-size: 0.8rem;
 }
 
-.button-active{
-    color: #ff0000;
+/* Colors of the buttons*/
+.button-active, .selectors button:hover, .selectors button:active, .selectors button:focus{
+    color: #0000ff;
 }
 
 .button-inactive{
