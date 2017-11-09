@@ -40,6 +40,9 @@ function changePage(){
     page.classList.remove("inactive");
     page.classList.add("active");
 
+    //Need to reset the scroll
+    window.scrollTo(0,0); 
+
     currentSelectorId = this.id;
     currentPageId = pageId;
 }
